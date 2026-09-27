@@ -3,20 +3,22 @@
 
 <head>
     <title>Question 4 - JavaScript</title>
-
 </head>
 
 <body>
     <h1>HTML DOM Events</h1>
-    <p>Trigger a function on hover that will output "Hello World":</p>
 
-    <button onmouseover="myFunction()">Action!</button>
+    <p>Trigger a function on hover or keyboard focus that will output "Hello World":</p>
+
+    <button onmouseover="myFunction()" onfocus="myFunction()">Action!</button>
+
     <p id="demo"></p>
+
+    <script>
+        function myFunction() {
+            document.getElementById("demo").innerHTML = "Hello World";
+        }
+    </script>
 </body>
-<script>
-    function myFunction() {
-        document.getElementById("demo").innerHTML = "Hello World";
-    }
-</script>
 
 </html>
